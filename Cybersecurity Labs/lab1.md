@@ -1,6 +1,7 @@
 Cybersecurity home lab 
 
 1.	Retrieve available updates
+
     ![updates](./images/1.png)
 2.	Upgrade the System
     ![upgrade](./images/2.png)
