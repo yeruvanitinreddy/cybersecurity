@@ -46,8 +46,8 @@
 3. Used `diff output1 output2` to compare.
 
 ### Screenshots
-     ![t-2](./Screenshots/2.1.png)
-     ![t-2](./Screenshots/2.2.png)
+   ![t-2](./Screenshots/2.1.png)
+   ![t-2](./Screenshots/2.2.png)
 
 ### Observations and Explanations
 - Both parent and child process outputs were identical, proving children inherit all environment variables from the parent at process creation.
@@ -59,7 +59,7 @@
 2. Ran it; `/usr/bin/env` printed all current environment variables.
 
 ### Screenshots
-     ![t-3](./Screenshots/3.1.png)
+   ![t-3](./Screenshots/3.1.png)
 
 ### Observations and Explanations
 - All environment variables are inherited by the new program when the parent provides its environment to `execve()`.
@@ -71,9 +71,9 @@
 2. Ran the program and observed `/usr/bin/env` output.
 
 ### Screenshots
-     ![t-4](./Screenshots/4.1.png)
-     ![t-4](./Screenshots/4.2.png)
-     ![t-4](./Screenshots/4.3.png)
+   ![t-4](./Screenshots/4.1.png)
+   ![t-4](./Screenshots/4.2.png)
+   ![t-4](./Screenshots/4.3.png)
 
 ### Observations and Explanations
 - Subprocesses spawned using `system()` inherit the parent's environment unless the parent specifically changes it.
@@ -90,10 +90,10 @@
 4. Ran `./foo` as Set-UID root.
 
 ### Screenshots
-     ![t-5](./Screenshots/5.1.png)
-     ![t-5](./Screenshots/5.2.png)
-     ![t-5](./Screenshots/5.3.png)
-     ![t-5](./Screenshots/5.4.png)
+   ![t-5](./Screenshots/5.1.png)
+   ![t-5](./Screenshots/5.2.png)
+   ![t-5](./Screenshots/5.3.png)
+   ![t-5](./Screenshots/5.4.png)
 
 ### Observations and Explanations
 - Custom variables appeared in output.
@@ -114,11 +114,11 @@
 5. Ran the vulnerable Set-UID program.
 
 ### Screenshots
-     ![t-6](./Screenshots/6.1.png)
-     ![t-6](./Screenshots/6.2.png)
-     ![t-6](./Screenshots/6.3.png)
-     ![t-6](./Screenshots/6.4.png)
-     ![t-6](./Screenshots/6.5.png)
+ ![t-6](./Screenshots/6.1.png)
+ ![t-6](./Screenshots/6.2.png)
+ ![t-6](./Screenshots/6.3.png)
+ ![t-6](./Screenshots/6.4.png)
+ ![t-6](./Screenshots/6.5.png)
 ### Observations and Explanations
 - The program executed `/tmp/ls` (malicious script) instead of system `ls`, running with root privileges.
 - This demonstrates how Set-UID programs using relative paths or `system()` are susceptible to path hijacking.
@@ -132,9 +132,9 @@
 4. Made program Set-UID root and reran.
 
 ### Screenshots
-    ![t-7](./Screenshots/7.1.png)
-    ![t-7](./Screenshots/7.2.png)
-    ![t-7](./Screenshots/7.3.png)
+ ![t-7](./Screenshots/7.1.png)
+ ![t-7](./Screenshots/7.2.png)
+ ![t-7](./Screenshots/7.3.png)
 ### Observations and Explanations
 - `LD_PRELOAD` is ignored when executing Set-UID programs; the override does not take effect.  
 - This restriction is enforced by the OS loader for security.
