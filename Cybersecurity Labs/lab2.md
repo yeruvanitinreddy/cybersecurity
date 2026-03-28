@@ -11,7 +11,6 @@
 8. Task 8: Capability Leaking (Command Injection and Mitigation) 
 9. Task 9: Capability Leak via Inherited File Descriptor  
 10. Conclusion  
-11. GitHub Repository Link  
 
 ## Task 1: Manipulating Environment Variables
 
